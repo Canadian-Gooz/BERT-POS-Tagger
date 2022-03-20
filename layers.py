@@ -40,6 +40,7 @@ class BertEmbeddings(tf.keras.layers.Layer):
                                                            arguments=dict(seq_length=self.seq_length))
     def call(self, text):
         
+        print('boom')
         tokens = self.tokenize(text)
         tokens = tokens[:,:,:1]
         shape = self.bert_out_shape(text)
